@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>OneAutumnNews</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<style>  
+* {
+box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+.header {
+  padding: 80px;
+  text-align: center;
+  background-image:url(data:image/png;base64,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);
+  background-size: 25%;
+  background-repeat:no-repeat;
+  background-position:top left;
+  background-attachment:scroll;
+  background-color:crimson;
+  color: Gold;
+
+}
+.header h1 {
+  font-size: 60px;
+  color: Gold;
+}
+.navbar {
+  overflow: hidden;
+  background-color: crimson;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: gold;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar span.right {
+  float: right;
+  display: block;
+  color: gold;
+  text-align: center;
+  padding: 14px 20px;
+}
+
+
+
+.navbar a:hover {
+  background-color: #728DCF;
+  color: black;
+}
+
+
+.main {   
+  -ms-flex: 70%; 
+  flex: 70%;
+  background-color: white;
+  color: crimson;
+  padding: 20px;
+}
+
+.news{
+ margin: 10px;
+ position: relative;
+ text-align: center;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  color: gold;
+  background: crimson;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>OneAutumnNews</h1>
+  
+</div>
+
+<div class="navbar">
+  <a href="#">Home</a>
+  <a href= "https://youtu.be/PT_n0yCCbRg">Politics</a>
+  <a href="https://youtu.be/PT_n0yCCbRg">K-Pop</a>
+  <a href="https://youtu.be/PT_n0yCCbRg">Games</a>
+  <a href="https://youtu.be/PT_n0yCCbRg">About us</a>
+  <span class="right">
+    <script>
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth());
+        var yyyy = today.getFullYear();
+        today = mm + '/' + dd + "/" + yyyy;
+        document.write(today);
+    </script>
+</span>
+</div>
+
+  <div class="main">
+    <h1>Day6’s Jae says he is experiencing freedom “for the first time in ten years”</h1>
+    <div class="news"></div>
+      <img src="https://www.nme.com/wp-content/uploads/2021/09/jae-park-jyp-entertainment-090121-696x442.jpg" alt="eaJ" width="800">
+    <h3>Jae – who releases solo music under the moniker eaJ – said that his new tattoos represent his newfound happiness and freedom. “This is just very much me, experiencing and expressing my freedom for the first time in ten years. And me being able to do whatever the fuck I want, solely because I want to.”
+</h3>
+    <a href="https://www.nme.com/en_asia/news/music/day6-jae-park-experiencing-freedom-for-the-first-time-in-ten-years-3076973">Read More</a>
+     <h2>T1 dominate Hanwha Life Esports to move on to Worlds 2021 semifinals</h2>
+    <div class="news"></div>
+      <img src=https://cdn1.dotesports.com/wp-content/uploads/2021/10/22095553/Features_Quarters_013-JPG.png alt="T1win" width="800">
+    <h3>The match was hyped up as a meeting between two of League’s best with Faker coming in as the greatest of all-time and Chovy as his equal counterpart of the future. The teaser video for this series failed to predict, however, that there would be a massive team difference in each game.
+</h3>
+   <a href=https://dotesports.com/league-of-legends/news/t1-hanwha-life-esports-worlds-2021>Read More</a>
+  </div>
+
+
+<div class="footer">
+  <h2>by Luke Daniel R. Caisip</h2>
+  <p>9-Arayat</p>
+</div>
+
+</body>
+</html>
+
+
+
+
